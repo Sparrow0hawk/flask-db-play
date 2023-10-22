@@ -23,3 +23,7 @@ If you have `hatch` installed you can use the following commands during developm
   hatch run lint:fmt
   ```
   
+- Running the Flask development server
+  ```bash
+  hatch run app
+  ```
