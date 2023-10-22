@@ -4,7 +4,7 @@ from flask import Flask
 from flask_db_play import home
 
 
-def create_app(test_config: dict[str, str | bool]) -> Flask:
+def create_app(test_config: dict[str, str | bool] | None = None) -> Flask:
     app = Flask(__name__)
 
     if test_config:
