@@ -20,7 +20,9 @@ classifiers = [
   "Programming Language :: Python :: 3.11",
   "Programming Language :: Python :: Implementation :: CPython",
 ]
-dependencies = []
+dependencies = [
+  "Flask~=2.3.0"
+]
 
 [tool.hatch.version]
 path = "src/flask_db_play/__about__.py"
@@ -30,6 +32,7 @@ dependencies = [
   "pytest",
 ]
 [tool.hatch.envs.default.scripts]
+app = "flask --app src/flask_db_play run"
 test = "pytest {args:tests}"
 
 
@@ -37,8 +40,8 @@ test = "pytest {args:tests}"
 python = ["3.9", "3.10", "3.11"]
 
 [tool.hatch.envs.lint]
-detached = true
 dependencies = [
+  "pytest",
   "black>=23.1.0",
   "mypy>=1.0.0",
 ]
